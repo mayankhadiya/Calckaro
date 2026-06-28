@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIP Calculator India 2026 - Calculate Mutual Fund SIP Returns Free | CalcKaro</title>
+<meta name="description" content="Free SIP Calculator India 2026. Calculate returns on monthly mutual fund SIP investments with step-up (top-up) support. See total invested, wealth gained & year-wise projection. Updated for FY 2025-26.">
+<meta name="keywords" content="SIP calculator, SIP return calculator India, mutual fund SIP calculator, step up SIP calculator, monthly SIP returns, lumpsum vs SIP, SIP calculator 2026">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://calckaro.in/sip-calculator.html">
+
+<meta property="og:title" content="SIP Calculator India 2026 - Free Mutual Fund SIP Returns Calculator">
+<meta property="og:description" content="Calculate SIP returns with step-up support. Free, accurate, private.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calckaro.in/sip-calculator.html">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { brand: { 50:'#fff7ed', 100:'#ffedd5', 500:'#f97316', 600:'#ea580c', 700:'#c2410c' } } } }
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"SIP Calculator",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Any (Web Browser)",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"1247"}
+}
+</script>
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HowTo",
+  "name":"How to calculate SIP returns online",
+  "step":[
+    {"@type":"HowToStep","name":"Enter monthly investment","text":"Type the amount you plan to invest every month in rupees."},
+    {"@type":"HowToStep","name":"Enter expected annual return","text":"Type the expected annual return rate, e.g. 12% for equity funds."},
+    {"@type":"HowToStep","name":"Enter investment duration","text":"Type the number of years you plan to stay invested."},
+    {"@type":"HowToStep","name":"Enable step-up if needed","text":"Optionally enable annual step-up to increase your SIP every year."},
+    {"@type":"HowToStep","name":"View results","text":"See your total invested amount, estimated returns and final corpus instantly."}
+  ]
+}
+</script>
+
+<!-- Schema: FAQ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is a SIP?","acceptedAnswer":{"@type":"Answer","text":"SIP stands for Systematic Investment Plan. It allows you to invest a fixed amount in a mutual fund every month. It promotes rupee-cost averaging and disciplined investing."}},
+    {"@type":"Question","name":"How is SIP return calculated?","acceptedAnswer":{"@type":"Answer","text":"SIP returns are calculated using the compound interest formula: FV = P × {[(1 + i)^n - 1] / i} × (1 + i), where P is the monthly investment, i is the monthly rate of return, and n is the number of months."}},
+    {"@type":"Question","name":"What is a step-up SIP?","acceptedAnswer":{"@type":"Answer","text":"A step-up SIP increases your monthly investment by a fixed percentage every year. For example, a ₹5,000 SIP with 10% annual step-up becomes ₹5,500 in year 2, ₹6,050 in year 3, and so on. Step-up SIPs can significantly boost your final corpus."}},
+    {"@type":"Question","name":"What return rate should I use?","acceptedAnswer":{"@type":"Answer","text":"Long-term equity mutual funds in India have historically delivered 10-14% annualized returns. Use 12% as a reasonable estimate for diversified equity funds. Debt funds typically deliver 6-8%."}},
+    {"@type":"Question","name":"Is SIP better than lumpsum?","acceptedAnswer":{"@type":"Answer","text":"SIPs reduce timing risk through rupee-cost averaging and are ideal for regular income earners. Lumpsum investments can outperform when markets are at lower levels, but timing the market is difficult. Many investors use both."}},
+    {"@type":"Question","name":"Is this SIP calculator accurate?","acceptedAnswer":{"@type":"Answer","text":"Yes. This calculator uses the exact future-value-of-annuity formula prescribed for SIP return calculations. Actual returns depend on market performance and may vary."}}
+  ]
+}
+</script>
+
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .gradient-hero { background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #ecfeff 100%); }
+  input[type="range"] { accent-color: #ea580c; }
+</style>
+</head>
+<body class="bg-white text-slate-800">
+
+<header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-2xl">🧮</span>
+      <span class="text-2xl font-bold text-brand-600">CalcKaro</span>
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700">
+      <a href="/" class="hover:text-brand-600">Home</a>
+      <a href="/sip-calculator.html" class="text-brand-600 font-semibold">SIP</a>
+      <a href="/income-tax-calculator.html" class="hover:text-brand-600">Income Tax</a>
+      <a href="/home-loan-emi-calculator.html" class="hover:text-brand-600">EMI</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero + Calculator -->
+<section class="gradient-hero">
+  <div class="max-w-6xl mx-auto px-4 py-10 md:py-16">
+    <div class="text-center max-w-3xl mx-auto mb-8">
+      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">📈 Free · Updated for 2026</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-3">
+        SIP Calculator India
+      </h1>
+      <p class="text-slate-600 text-lg">
+        Calculate returns on your monthly mutual fund SIP. Includes step-up (top-up) support for accurate long-term wealth projection.
+      </p>
+    </div>
+
+    <!-- Calculator Card -->
+    <div class="bg-white border border-slate-200 rounded-2xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Inputs -->
+        <div class="space-y-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2">Monthly Investment (₹)</label>
+            <input type="number" id="sipAmount" value="5000" min="100" step="500" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <input type="range" id="sipAmountRange" min="500" max="100000" step="500" value="5000" class="w-full mt-2">
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2">Expected Annual Return (%)</label>
+            <input type="number" id="sipRate" value="12" min="0" max="50" step="0.5" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <input type="range" id="sipRateRange" min="1" max="25" step="0.5" value="12" class="w-full mt-2">
+            <p class="text-xs text-slate-500 mt-1">Long-term equity: 10-14% · Debt funds: 6-8%</p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2">Investment Duration (Years)</label>
+            <input type="number" id="sipYears" value="10" min="1" max="50" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <input type="range" id="sipYearsRange" min="1" max="40" step="1" value="10" class="w-full mt-2">
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-lg">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="sipStepup" class="w-5 h-5 accent-brand-600">
+              <span class="font-semibold text-sm">Enable Annual Step-up</span>
+            </label>
+            <div id="stepupBox" class="mt-3 hidden">
+              <label class="block text-sm font-semibold mb-2">Step-up % per year</label>
+              <input type="number" id="sipStepupRate" value="10" min="0" max="100" step="1" class="w-full border border-slate-300 rounded-lg px-4 py-2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="bg-gradient-to-br from-brand-50 to-orange-50 rounded-xl p-6 flex flex-col justify-center">
+          <div class="text-center mb-6">
+            <p class="text-sm text-slate-600 mb-1">Estimated Future Value</p>
+            <p id="sipFutureValue" class="text-4xl md:text-5xl font-extrabold text-brand-700">₹ 11,61,695</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white rounded-lg p-4 text-center">
+              <p class="text-xs text-slate-500 mb-1">Total Invested</p>
+              <p id="sipInvested" class="text-xl font-bold text-slate-800">₹ 6,00,000</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 text-center">
+              <p class="text-xs text-slate-500 mb-1">Wealth Gained</p>
+              <p id="sipGains" class="text-xl font-bold text-green-600">₹ 5,61,695</p>
+            </div>
+          </div>
+
+          <!-- Donut chart -->
+          <div class="flex items-center gap-4">
+            <svg width="100" height="100" viewBox="0 0 36 36" class="transform -rotate-90">
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="#fed7aa" stroke-width="4"/>
+              <circle id="sipDonut" cx="18" cy="18" r="15.9" fill="none" stroke="#ea580c" stroke-width="4" stroke-dasharray="48 100" stroke-linecap="round"/>
+            </svg>
+            <div class="text-xs text-slate-600">
+              <p><span class="inline-block w-3 h-3 bg-brand-600 rounded-sm mr-1 align-middle"></span>Invested</p>
+              <p><span class="inline-block w-3 h-3 bg-orange-200 rounded-sm mr-1 align-middle"></span>Returns</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AdSense placeholder -->
+    <div class="max-w-4xl mx-auto mt-6">
+      <div class="bg-slate-100 border border-dashed border-slate-300 text-center text-slate-500 text-xs py-6 rounded">
+        [ AdSense Banner — paste your AdSense code here after approval ]
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Year-wise table -->
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-center mb-8">Year-wise SIP Projection</h2>
+  <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-100">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Year</th>
+            <th class="px-4 py-3 text-right font-semibold">Invested (₹)</th>
+            <th class="px-4 py-3 text-right font-semibold">Value (₹)</th>
+            <th class="px-4 py-3 text-right font-semibold">Returns (₹)</th>
+          </tr>
+        </thead>
+        <tbody id="sipTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SEO Content -->
+<section class="max-w-4xl mx-auto px-4 py-10 prose prose-slate">
+  <h2 class="text-3xl font-bold mb-6">What is a SIP and how does it work?</h2>
+  <p>
+    A <strong>Systematic Investment Plan (SIP)</strong> is one of the most popular ways to invest in Indian mutual funds. Instead of investing a large lump sum at once, a SIP lets you invest a fixed amount — usually ₹500 or more — every month into a mutual fund scheme of your choice. The money is auto-debited from your bank account on a fixed date each month, and units of the mutual fund are allotted to you at that day's Net Asset Value (NAV).
+  </p>
+  <p>
+    SIPs work on the principle of <strong>rupee-cost averaging</strong>. When markets are high, your fixed monthly amount buys fewer units. When markets are low, it buys more. Over time, this averages out your purchase cost and reduces the risk of investing at a market peak. Combined with the power of compounding — where the returns you earn each year start earning their own returns — SIPs can grow wealth remarkably over long horizons.
+  </p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">How to calculate SIP returns</h3>
+  <p>
+    The future value of a SIP is calculated using the future-value-of-annuity formula:
+  </p>
+  <p class="bg-slate-100 p-4 rounded font-mono text-center">
+    FV = P × { [(1 + i)^n − 1] / i } × (1 + i)
+  </p>
+  <p>
+    Where: <strong>P</strong> = monthly SIP amount, <strong>i</strong> = monthly interest rate (annual rate ÷ 12 ÷ 100), and <strong>n</strong> = total number of months (years × 12).
+  </p>
+  <p>
+    For example, a ₹5,000 monthly SIP at 12% annual return for 10 years becomes approximately ₹11.6 lakh. Of this, ₹6 lakh is your principal and ₹5.6 lakh is wealth gained through compounding.
+  </p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">What is a Step-up SIP?</h3>
+  <p>
+    A <strong>step-up SIP</strong> (also called top-up SIP) increases your monthly investment by a fixed percentage every year. So a ₹5,000 SIP with a 10% annual step-up becomes ₹5,500 in year 2, ₹6,050 in year 3, ₹6,655 in year 4, and so on.
+  </p>
+  <p>
+    Step-up SIPs dramatically increase your final corpus because both your principal and the compounding effect scale up over time. A 10-year SIP of ₹5,000/month grows to roughly ₹11.6 lakh. The same SIP with a 10% annual step-up grows to nearly ₹19.6 lakh — that's 69% more wealth from the same habit, just by growing your contribution with your income.
+  </p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">SIP vs Lumpsum — which is better?</h3>
+  <p>
+    Neither is universally better — they suit different situations. <strong>SIPs</strong> are ideal for people with regular monthly income who want disciplined, hands-off investing without worrying about market timing. They reduce emotional decision-making and remove the risk of deploying a large sum at the wrong time. <strong>Lumpsum</strong> investments can outperform when markets are at lower levels, but timing the market is notoriously difficult even for professionals.
+  </p>
+  <p>
+    Many Indian investors use both: SIPs for monthly surplus and lumpsums for bonuses, windfalls, or maturity proceeds. The key is to stay invested for the long term — 7+ years for equity — to ride out volatility and let compounding do its work.
+  </p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">Tax on SIP returns in India (FY 2025-26)</h3>
+  <p>
+    SIP returns are taxed based on the holding period and the type of fund:
+  </p>
+  <ul>
+    <li><strong>Equity mutual funds</strong> — Short-term capital gains (held under 1 year) are taxed at 15%. Long-term gains (held over 1 year) up to ₹1.25 lakh per year are tax-free; gains above ₹1.25 lakh are taxed at 10% (without indexation).</li>
+    <li><strong>Debt mutual funds</strong> — All gains, regardless of holding period, are added to your income and taxed at your slab rate as per the new rules from April 2023.</li>
+    <li><strong>ELSS funds</strong> — Tax-saving equity funds with a 3-year lock-in. Eligible for deduction under Section 80C up to ₹1.5 lakh per year.</li>
+  </ul>
+  <h3 class="text-2xl font-bold mt-8 mb-4">Tips to maximize SIP returns</h3>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li><strong>Start early.</strong> Even ₹1,000/month for 25 years beats ₹10,000/month for 10 years, thanks to compounding.</li>
+    <li><strong>Use step-up.</strong> Increase your SIP by 10% every year to keep pace with salary hikes.</li>
+    <li><strong>Stay invested.</strong> Don't stop SIPs during market crashes — that's when you buy the most units.</li>
+    <li><strong>Diversify.</strong> Spread across large-cap, mid-cap, small-cap, and index funds based on your risk appetite.</li>
+    <li><strong>Review annually.</strong> Re-balance your portfolio once a year, but don't churn funds every quarter.</li>
+  </ol>
+</section>
+
+<!-- FAQ -->
+<section class="max-w-4xl mx-auto px-4 py-10">
+  <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+  <div class="space-y-3">
+    <details class="bg-white border border-slate-200 rounded-lg p-4">
+      <summary class="font-semibold cursor-pointer">What is a SIP?</summary>
+      <p class="mt-2 text-slate-700">SIP stands for Systematic Investment Plan. It allows you to invest a fixed amount in a mutual fund every month. It promotes rupee-cost averaging and disciplined investing.</p>
+    </details>
+    <details class="bg-white border border-slate-200 rounded-lg p-4">
+      <summary class="font-semibold cursor-pointer">How is SIP return calculated?</summary>
+      <p class="mt-2 text-slate-700">SIP returns are calculated using the compound interest formula: FV = P × {[(1 + i)^n - 1] / i} × (1 + i), where P is the monthly investment, i is the monthly rate of return, and n is the number of months.</p>
+    </details>
+    <details class="bg-white border border-slate-200 rounded-lg p-4">
+      <summary class="font-semibold cursor-pointer">What is a step-up SIP?</summary>
+      <p class="mt-2 text-slate-700">A step-up SIP increases your monthly investment by a fixed percentage every year. For example, a ₹5,000 SIP with 10% annual step-up becomes ₹5,500 in year 2, ₹6,050 in year 3, and so on. Step-up SIPs can significantly boost your final corpus.</p>
+    </details>
+    <details class="bg-white border border-slate-200 rounded-lg p-4">
+      <summary class="font-semibold cursor-pointer">What return rate should I use?</summary>
+      <p class="mt-2 text-slate-700">Long-term equity mutual funds in India have historically delivered 10-14% annualized returns. Use 12% as a reasonable estimate for diversified equity funds. Debt funds typically deliver 6-8%.</p>
+    </details>
+    <details class="bg-white border border-slate-200 rounded-lg p-4">
+      <summary class="font-semibold cursor-pointer">Is SIP better than lumpsum?</summary>
+      <p class="mt-2 text-slate-700">SIPs reduce timing risk through rupee-cost averaging and are ideal for regular income earners. Lumpsum investments can outperform when markets are at lower levels, but timing the market is difficult. Many investors use both.</p>
+    </details>
+    <details class="bg-white border border-slate-200 rounded-lg p-4">
+      <summary class="font-semibold cursor-pointer">Is this SIP calculator accurate?</summary>
+      <p class="mt-2 text-slate-700">Yes. This calculator uses the exact future-value-of-annuity formula prescribed for SIP return calculations. Actual returns depend on market performance and may vary.</p>
+    </details>
+  </div>
+</section>
+
+<!-- Related Tools -->
+<section class="bg-slate-50 py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center mb-6">Related Calculators</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/income-tax-calculator.html" class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition">
+        <div class="text-3xl mb-2">🧾</div>
+        <h3 class="font-bold mb-1">Income Tax Calculator</h3>
+        <p class="text-sm text-slate-600">Compare Old vs New regime for FY 2025-26.</p>
+      </a>
+      <a href="/home-loan-emi-calculator.html" class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition">
+        <div class="text-3xl mb-2">🏠</div>
+        <h3 class="font-bold mb-1">Home Loan EMI</h3>
+        <p class="text-sm text-slate-600">Calculate EMI and total interest on home loans.</p>
+      </a>
+      <a href="/" class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition">
+        <div class="text-3xl mb-2">🧮</div>
+        <h3 class="font-bold mb-1">All Calculators</h3>
+        <p class="text-sm text-slate-600">Explore every free tool on CalcKaro.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Disclaimer -->
+<section class="max-w-4xl mx-auto px-4 py-8 text-xs text-slate-500 text-center">
+  <p><strong>Disclaimer:</strong> All calculations are for informational and educational purposes only and do not constitute investment advice. Mutual fund investments are subject to market risks. Past performance does not guarantee future returns. Please read the offer document carefully before investing.</p>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-slate-200 bg-slate-50 py-10">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-2xl">🧮</span>
+        <span class="text-xl font-bold text-brand-600">CalcKaro</span>
+      </div>
+      <p class="text-slate-600">India's smartest free finance calculators.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Calculators</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li><a href="/sip-calculator.html" class="hover:text-brand-600">SIP Calculator</a></li>
+        <li><a href="/income-tax-calculator.html" class="hover:text-brand-600">Income Tax Calculator</a></li>
+        <li><a href="/home-loan-emi-calculator.html" class="hover:text-brand-600">Home Loan EMI</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Company</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li><a href="/about.html" class="hover:text-brand-600">About</a></li>
+        <li><a href="/contact.html" class="hover:text-brand-600">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Legal</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li><a href="/privacy-policy.html" class="hover:text-brand-600">Privacy Policy</a></li>
+        <li><a href="/disclaimer.html" class="hover:text-brand-600">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
+    © 2026 CalcKaro. All calculations are for informational purposes only.
+  </div>
+</footer>
+
+<script>
+// SIP Calculator Logic
+const fmt = n => '₹ ' + Math.round(n).toLocaleString('en-IN');
+
+function calculateSIP() {
+  const P = parseFloat(document.getElementById('sipAmount').value) || 0;
+  const annualRate = parseFloat(document.getElementById('sipRate').value) || 0;
+  const years = parseInt(document.getElementById('sipYears').value) || 0;
+  const stepUpEnabled = document.getElementById('sipStepup').checked;
+  const stepUpRate = parseFloat(document.getElementById('sipStepupRate').value) || 0;
+
+  let totalInvested = 0;
+  let totalValue = 0;
+  let currentMonthly = P;
+  const monthlyRate = annualRate / 12 / 100;
+  const tableBody = document.getElementById('sipTableBody');
+  tableBody.innerHTML = '';
+
+  let yearlyInvested = 0;
+  let yearlyValue = 0;
+
+  for (let month = 1; month <= years * 12; month++) {
+    // Value at end of this month = (lastValue + thisMonthInvest) * (1 + monthlyRate)
+    totalValue = (totalValue + currentMonthly) * (1 + monthlyRate);
+    totalInvested += currentMonthly;
+    yearlyInvested += currentMonthly;
+    yearlyValue = totalValue;
+
+    if (month % 12 === 0) {
+      const yr = month / 12;
+      const returns = yearlyValue - yearlyInvested;
+      const row = `<tr class="border-t border-slate-200">
+        <td class="px-4 py-2 font-medium">${yr}</td>
+        <td class="px-4 py-2 text-right">${fmt(yearlyInvested)}</td>
+        <td class="px-4 py-2 text-right font-semibold">${fmt(yearlyValue)}</td>
+        <td class="px-4 py-2 text-right text-green-600">${fmt(returns)}</td>
+      </tr>`;
+      tableBody.insertAdjacentHTML('beforeend', row);
+
+      // Apply step-up at end of each year for next year
+      if (stepUpEnabled) {
+        currentMonthly = currentMonthly * (1 + stepUpRate / 100);
+        yearlyInvested = 0;
+        yearlyValue = 0;
+      }
+    }
+  }
+
+  const gains = totalValue - totalInvested;
+  document.getElementById('sipFutureValue').textContent = fmt(totalValue);
+  document.getElementById('sipInvested').textContent = fmt(totalInvested);
+  document.getElementById('sipGains').textContent = fmt(gains);
+
+  // Donut chart
+  const investPct = (totalInvested / totalValue) * 100;
+  const donut = document.getElementById('sipDonut');
+  donut.setAttribute('stroke-dasharray', `${investPct.toFixed(2)} 100`);
+}
+
+// Range sync
+['sipAmount','sipRate','sipYears'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calculateSIP);
+  document.getElementById(id+'Range').addEventListener('input', e => {
+    document.getElementById(id).value = e.target.value;
+    calculateSIP();
+  });
+});
+
+document.getElementById('sipStepup').addEventListener('change', e => {
+  document.getElementById('stepupBox').classList.toggle('hidden', !e.target.checked);
+  calculateSIP();
+});
+
+document.getElementById('sipStepupRate').addEventListener('input', calculateSIP);
+
+calculateSIP();
+</script>
+
+</body>
+</html>

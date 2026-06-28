@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalcKaro - Free SIP, EMI & Income Tax Calculators India (2026)</title>
+<meta name="description" content="India's smartest free finance calculators. Calculate SIP returns, home loan EMI, income tax (Old vs New regime), GST, HRA, FD and more. No login. No API. 100% free.">
+<meta name="keywords" content="SIP calculator India, EMI calculator, income tax calculator, GST calculator, HRA calculator, FD calculator, mutual fund calculator, finance calculator India">
+<meta name="author" content="CalcKaro">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://calckaro.in/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="CalcKaro - Free Finance Calculators India">
+<meta property="og:description" content="India's smartest free finance calculators. SIP, EMI, Income Tax, GST and more. No login, no signup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calckaro.in/">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { 50:'#fff7ed', 100:'#ffedd5', 500:'#f97316', 600:'#ea580c', 700:'#c2410c' }
+      }
+    }
+  }
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+
+<!-- Schema: Organization + WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CalcKaro",
+  "url": "https://calckaro.in/",
+  "description": "India's smartest free finance calculators",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://calckaro.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CalcKaro",
+  "url": "https://calckaro.in/",
+  "logo": "https://calckaro.in/logo.png",
+  "sameAs": []
+}
+</script>
+
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .gradient-hero { background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #ecfeff 100%); }
+  .card-hover { transition: transform .2s ease, box-shadow .2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 25px -5px rgb(0 0 0 / .1); }
+</style>
+</head>
+<body class="bg-white text-slate-800">
+
+<!-- Header -->
+<header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-3xl">🧮</span>
+      <span class="text-2xl font-bold text-brand-600">CalcKaro</span>
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700">
+      <a href="/" class="hover:text-brand-600">Home</a>
+      <a href="/sip-calculator.html" class="hover:text-brand-600">SIP</a>
+      <a href="/income-tax-calculator.html" class="hover:text-brand-600">Income Tax</a>
+      <a href="/home-loan-emi-calculator.html" class="hover:text-brand-600">EMI</a>
+      <a href="/about.html" class="hover:text-brand-600">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="gradient-hero">
+  <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
+    <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">🇮🇳 Made for India · 100% Free</span>
+    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-4">
+      India's Smartest <span class="text-brand-600">Free Finance</span> Calculators
+    </h1>
+    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+      Calculate SIP returns, Home Loan EMI, Income Tax (Old vs New regime), GST, HRA and more.
+      No login. No signup. No API. Just instant, accurate answers.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="/sip-calculator.html" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg">Try SIP Calculator →</a>
+      <a href="/income-tax-calculator.html" class="bg-white hover:bg-slate-50 text-slate-900 px-6 py-3 rounded-lg font-semibold border border-slate-300">Income Tax (Old vs New)</a>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense placeholder (top) -->
+<div class="max-w-6xl mx-auto px-4 my-6">
+  <div class="bg-slate-100 border border-dashed border-slate-300 text-center text-slate-500 text-xs py-6 rounded">
+    [ AdSense Top Banner — paste your AdSense code here after approval ]
+  </div>
+</div>
+
+<!-- Tools Grid -->
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-center mb-3">All Free Calculators</h2>
+  <p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto">
+    Every calculator runs entirely in your browser. Your financial data never leaves your device. Zero tracking. Zero API costs.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <a href="/sip-calculator.html" class="card-hover block bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+      <div class="text-4xl mb-3">📈</div>
+      <h3 class="text-xl font-bold mb-2">SIP Calculator</h3>
+      <p class="text-slate-600 text-sm">Calculate returns on monthly Systematic Investment Plans. Includes step-up SIP support.</p>
+      <span class="text-brand-600 text-sm font-semibold mt-3 inline-block">Calculate now →</span>
+    </a>
+
+    <a href="/income-tax-calculator.html" class="card-hover block bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+      <div class="text-4xl mb-3">🧾</div>
+      <h3 class="text-xl font-bold mb-2">Income Tax Calculator</h3>
+      <p class="text-slate-600 text-sm">Compare Old vs New tax regime for FY 2025-26 (AY 2026-27). Salaried & non-salaried.</p>
+      <span class="text-brand-600 text-sm font-semibold mt-3 inline-block">Calculate now →</span>
+    </a>
+
+    <a href="/home-loan-emi-calculator.html" class="card-hover block bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+      <div class="text-4xl mb-3">🏠</div>
+      <h3 class="text-xl font-bold mb-2">Home Loan EMI Calculator</h3>
+      <p class="text-slate-600 text-sm">Calculate EMI, total interest and amortization schedule for any home loan.</p>
+      <span class="text-brand-600 text-sm font-semibold mt-3 inline-block">Calculate now →</span>
+    </a>
+
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 opacity-70">
+      <div class="text-4xl mb-3">🚗</div>
+      <h3 class="text-xl font-bold mb-2 text-slate-500">Car Loan EMI</h3>
+      <p class="text-slate-500 text-sm">Coming soon — Month 2 build.</p>
+    </div>
+
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 opacity-70">
+      <div class="text-4xl mb-3">📊</div>
+      <h3 class="text-xl font-bold mb-2 text-slate-500">GST Calculator</h3>
+      <p class="text-slate-500 text-sm">Coming soon — Month 2 build.</p>
+    </div>
+
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 opacity-70">
+      <div class="text-4xl mb-3">💰</div>
+      <h3 class="text-xl font-bold mb-2 text-slate-500">HRA Exemption</h3>
+      <p class="text-slate-500 text-sm">Coming soon — Month 2 build.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Why CalcKaro -->
+<section class="bg-slate-50 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Why CalcKaro?</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="text-center">
+        <div class="text-4xl mb-2">🔒</div>
+        <h3 class="font-bold mb-1">100% Private</h3>
+        <p class="text-sm text-slate-600">All calculations run in your browser. No data sent to servers.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl mb-2">⚡</div>
+        <h3 class="font-bold mb-1">Instant Results</h3>
+        <p class="text-sm text-slate-600">No page reloads. Calculations update as you type.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl mb-2">🇮🇳</div>
+        <h3 class="font-bold mb-1">Made for India</h3>
+        <p class="text-sm text-slate-600">Built around Indian tax rules, EMI norms and investment products.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl mb-2">💸</div>
+        <h3 class="font-bold mb-1">Always Free</h3>
+        <p class="text-sm text-slate-600">No premium tier. No paywall. No "upgrade" popups. Ever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO Content -->
+<section class="max-w-4xl mx-auto px-4 py-16 prose prose-slate">
+  <h2 class="text-3xl font-bold mb-6">Smart Financial Planning for Indians in 2026</h2>
+  <p class="text-slate-700 mb-4">
+    India is one of the world's fastest-growing retail investor markets, with over <strong>7 crore</strong> demat accounts and millions more evaluating SIPs, FDs, home loans and tax-saving options every month. Yet most financial decisions are still made on gut feel — because the math is buried in brokerage spreadsheets and bank calculators that hide the actual formulas.
+  </p>
+  <p class="text-slate-700 mb-4">
+    CalcKaro exists to fix that. We build clean, fast, accurate financial calculators using the exact formulas Indian tax law and SEBI guidelines prescribe. Whether you're a first-time SIP investor trying to figure out how ₹5,000/month grows over 10 years, a salaried employee comparing the Old vs New tax regime, or a home buyer trying to decide between a 20-year and 25-year loan tenure — the math is the same, and you deserve to see it instantly.
+  </p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">How CalcKaro helps you</h3>
+  <ul class="list-disc pl-6 text-slate-700 space-y-2">
+    <li><strong>SIP Calculator</strong> — Project the future value of monthly mutual fund investments with annual step-up support.</li>
+    <li><strong>Income Tax Calculator</strong> — Compare Old vs New regime tax out-go for FY 2025-26 (AY 2026-27) under the latest CBDT rules.</li>
+    <li><strong>Home Loan EMI Calculator</strong> — Compute monthly EMI, total interest paid, and full amortization schedule for any loan amount, rate and tenure.</li>
+    <li><strong>Coming soon</strong> — Car Loan EMI, Personal Loan EMI, GST, HRA Exemption, FD, RD, PPF, NPS, Gratuity and more.</li>
+  </ul>
+  <h3 class="text-2xl font-bold mt-8 mb-4">Our promise</h3>
+  <p class="text-slate-700 mb-4">
+    Every calculator on CalcKaro is built using the formulas prescribed by Indian regulators and follows the latest FY's tax slabs. We refresh our logic every budget season so you always see numbers that match what your bank, broker or tax portal will actually charge you.
+  </p>
+  <p class="text-slate-700 mb-4">
+    We don't ask for your email. We don't store your inputs. We don't sell your data. The site is free forever — supported by non-intrusive ads and the occasional affiliate link to a financial product we genuinely recommend.
+  </p>
+</section>
+
+<!-- AdSense placeholder (bottom) -->
+<div class="max-w-6xl mx-auto px-4 my-6">
+  <div class="bg-slate-100 border border-dashed border-slate-300 text-center text-slate-500 text-xs py-6 rounded">
+    [ AdSense Bottom Banner — paste your AdSense code here after approval ]
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-slate-200 bg-slate-50 py-10">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-2xl">🧮</span>
+        <span class="text-xl font-bold text-brand-600">CalcKaro</span>
+      </div>
+      <p class="text-slate-600">India's smartest free finance calculators.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Calculators</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li><a href="/sip-calculator.html" class="hover:text-brand-600">SIP Calculator</a></li>
+        <li><a href="/income-tax-calculator.html" class="hover:text-brand-600">Income Tax Calculator</a></li>
+        <li><a href="/home-loan-emi-calculator.html" class="hover:text-brand-600">Home Loan EMI</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Company</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li><a href="/about.html" class="hover:text-brand-600">About</a></li>
+        <li><a href="/contact.html" class="hover:text-brand-600">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Legal</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li><a href="/privacy-policy.html" class="hover:text-brand-600">Privacy Policy</a></li>
+        <li><a href="/disclaimer.html" class="hover:text-brand-600">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
+    © 2026 CalcKaro. All calculations are for informational purposes only and do not constitute financial advice.
+  </div>
+</footer>
+
+</body>
+</html>
