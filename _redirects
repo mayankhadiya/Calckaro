@@ -1,0 +1,10 @@
+# Netlify redirects — consolidate all .html URLs to canonical non-.html form
+# This fixes the duplicate content issue (Google was indexing both)
+
+/sip-calculator.html          /sip-calculator            301
+/income-tax-calculator.html   /income-tax-calculator     301
+/home-loan-emi-calculator.html /home-loan-emi-calculator 301
+/about.html                   /about                     301
+/contact.html                 /contact                   301
+/privacy-policy.html          /privacy-policy            301
+/disclaimer.html              /disclaimer                301
