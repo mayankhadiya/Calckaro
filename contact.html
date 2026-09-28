@@ -3,80 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact CalcKaro - Calculator Suggestions, Bug Reports, Partnerships</title>
-<meta name="description" content="Contact CalcKaro - send us calculator suggestions, bug reports, or partnership inquiries. We respond within 48 hours.">
+<title>Contact CalcKaro</title>
+<meta name="description" content="Contact CalcKaro for calculator suggestions, corrections, and bug reports.">
+<meta name="author" content="Mayank Khadiya (CalcKaro maintainer)">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ea580c">
 <link rel="canonical" href="https://calckaroindia.netlify.app/contact">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .skip-link { position: absolute; left: -9999px; top: auto; }
+  .skip-link:focus { left: 1rem; top: 1rem; background: #111827; color: #fff; padding: .5rem .75rem; border-radius: .5rem; z-index: 60; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #ea580c;
+    outline-offset: 2px;
+  }
+</style>
 </head>
 <body class="bg-white text-slate-800">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2"><span class="text-2xl">🧮</span><span class="text-2xl font-bold text-brand-600">CalcKaro</span></a>
-    <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700">
+    <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700" aria-label="Primary">
       <a href="/" class="hover:text-brand-600">Home</a>
       <a href="/sip-calculator" class="hover:text-brand-600">SIP</a>
       <a href="/income-tax-calculator" class="hover:text-brand-600">Income Tax</a>
       <a href="/home-loan-emi-calculator" class="hover:text-brand-600">EMI</a>
+      <a href="/about" class="hover:text-brand-600">About</a>
     </nav>
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-4 py-12">
+<main id="main-content" class="max-w-4xl mx-auto px-4 py-12">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Contact CalcKaro</h1>
   <p class="text-lg text-slate-700 mb-8">
-    Got a calculator idea, found a bug, spotted an outdated tax slab, or want to talk partnerships? Drop us a line — we read every message and respond within 48 hours.
+    Share a calculator suggestion, correction, or bug report.
   </p>
 
   <div class="grid md:grid-cols-3 gap-6 mb-12">
     <div class="bg-slate-50 p-6 rounded-xl text-center">
       <div class="text-4xl mb-2">💡</div>
-      <h3 class="font-bold mb-1">Calculator Suggestions</h3>
+      <h2 class="font-bold mb-1">Calculator Suggestions</h2>
       <p class="text-sm text-slate-600">Tell us what to build next.</p>
     </div>
     <div class="bg-slate-50 p-6 rounded-xl text-center">
       <div class="text-4xl mb-2">🐛</div>
-      <h3 class="font-bold mb-1">Bug Reports</h3>
-      <p class="text-sm text-slate-600">Spotted wrong math? Tell us.</p>
+      <h2 class="font-bold mb-1">Bug Reports</h2>
+      <p class="text-sm text-slate-600">Report wrong math or UI issues.</p>
     </div>
     <div class="bg-slate-50 p-6 rounded-xl text-center">
-      <div class="text-4xl mb-2">🤝</div>
-      <h3 class="font-bold mb-1">Partnerships</h3>
-      <p class="text-sm text-slate-600">Banks, fintechs, content creators.</p>
+      <div class="text-4xl mb-2">📝</div>
+      <h2 class="font-bold mb-1">Data Corrections</h2>
+      <p class="text-sm text-slate-600">Flag outdated assumptions and references.</p>
     </div>
   </div>
 
-  <form action="mailto:hello@calckaro.in" method="post" enctype="text/plain" class="bg-white border border-slate-200 rounded-xl p-6 space-y-4">
+  <form action="mailto:hello@calckaro.in" method="post" enctype="text/plain" class="bg-white border border-slate-200 rounded-xl p-6 space-y-4" aria-describedby="mailto-note">
     <div>
-      <label class="block text-sm font-semibold mb-2">Your Name</label>
-      <input type="text" required class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+      <label for="contact-name" class="block text-sm font-semibold mb-2">Your Name</label>
+      <input id="contact-name" name="name" type="text" required autocomplete="name" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
     </div>
     <div>
-      <label class="block text-sm font-semibold mb-2">Email Address</label>
-      <input type="email" required class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+      <label for="contact-email" class="block text-sm font-semibold mb-2">Email Address</label>
+      <input id="contact-email" name="email" type="email" inputmode="email" required autocomplete="email" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
     </div>
     <div>
-      <label class="block text-sm font-semibold mb-2">Topic</label>
-      <select class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+      <label for="contact-topic" class="block text-sm font-semibold mb-2">Topic</label>
+      <select id="contact-topic" name="topic" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none">
         <option>Calculator suggestion</option>
         <option>Bug report</option>
-        <option>Tax slab correction</option>
+        <option>Tax/rule correction</option>
         <option>Partnership inquiry</option>
-        <option>Press / Media</option>
         <option>Other</option>
       </select>
     </div>
     <div>
-      <label class="block text-sm font-semibold mb-2">Message</label>
-      <textarea rows="5" required class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+      <label for="contact-message" class="block text-sm font-semibold mb-2">Message</label>
+      <textarea id="contact-message" name="message" rows="5" required autocomplete="off" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
     </div>
     <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg font-semibold">Send Message</button>
+    <p id="mailto-note" class="text-xs text-slate-500">This form uses a <code>mailto:</code> fallback and opens your email client to send the message.</p>
   </form>
 
   <div class="mt-8 text-sm text-slate-600">
     <p><strong>Email:</strong> hello@calckaro.in</p>
-    <p class="mt-2"><strong>Response time:</strong> Usually within 24-48 hours, Monday–Friday.</p>
+    <p class="mt-2"><strong>Typical response time:</strong> 1-3 business days.</p>
+  </div>
+
+  <div class="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-900">
+    <p><strong>Last reviewed:</strong> 2026-09-28</p>
   </div>
 </main>
 

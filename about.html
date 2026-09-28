@@ -3,62 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About CalcKaro - India's Free Finance Calculator Platform</title>
-<meta name="description" content="About CalcKaro - We build free, fast, accurate finance calculators for Indian investors, taxpayers and home buyers. Our mission is financial clarity for every Indian.">
+<title>About CalcKaro</title>
+<meta name="description" content="About CalcKaro: free browser-based SIP, income tax and home loan EMI calculators for India.">
+<meta name="author" content="Mayank Khadiya (CalcKaro maintainer)">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ea580c">
 <link rel="canonical" href="https://calckaroindia.netlify.app/about">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .skip-link { position: absolute; left: -9999px; top: auto; }
+  .skip-link:focus { left: 1rem; top: 1rem; background: #111827; color: #fff; padding: .5rem .75rem; border-radius: .5rem; z-index: 60; }
+  a:focus-visible { outline: 2px solid #ea580c; outline-offset: 2px; }
+</style>
 </head>
 <body class="bg-white text-slate-800">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2"><span class="text-2xl">🧮</span><span class="text-2xl font-bold text-brand-600">CalcKaro</span></a>
-    <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700">
+    <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700" aria-label="Primary">
       <a href="/" class="hover:text-brand-600">Home</a>
       <a href="/sip-calculator" class="hover:text-brand-600">SIP</a>
       <a href="/income-tax-calculator" class="hover:text-brand-600">Income Tax</a>
       <a href="/home-loan-emi-calculator" class="hover:text-brand-600">EMI</a>
+      <a href="/contact" class="hover:text-brand-600">Contact</a>
     </nav>
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-4 py-12">
+<main id="main-content" class="max-w-4xl mx-auto px-4 py-12">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-6">About CalcKaro</h1>
   <p class="text-lg text-slate-700 mb-6">
-    CalcKaro is a free financial calculator platform built specifically for Indian investors, taxpayers, salaried employees, and home buyers. Our mission is simple: <strong>give every Indian instant, accurate, transparent financial math — without paywalls, logins, or tracking</strong>.
+    CalcKaro is a free static website with practical financial calculators for Indian users.
+    The currently published tools are SIP, income tax comparison, and home loan EMI.
   </p>
 
-  <h2 class="text-2xl font-bold mt-8 mb-3">Why we built this</h2>
+  <h2 class="text-2xl font-bold mt-8 mb-3">How the site works</h2>
   <p class="text-slate-700 mb-4">
-    Most financial calculators in India are buried inside brokerage websites, bank portals, or finance apps that exist to sell you something. The math is hidden, the inputs are vague, and the outputs are designed to nudge you toward a product — not to inform you.
-  </p>
-  <p class="text-slate-700 mb-4">
-    We built CalcKaro to be different. Every calculator here shows you the actual formula. Every input is yours alone — we don't store your salary, your loan amount, or your tax data anywhere. Every result is computed instantly in your browser, with no API calls, no subscriptions, and no login.
+    Calculations run in your browser using JavaScript on each page. Inputs are not sent to a backend by default.
+    Results are estimates and should be verified with official sources and your financial/tax advisor when needed.
   </p>
 
-  <h2 class="text-2xl font-bold mt-8 mb-3">What we believe</h2>
+  <h2 class="text-2xl font-bold mt-8 mb-3">Maintainer</h2>
+  <p class="text-slate-700 mb-4">
+    This repository is maintained by <strong>Mayank Khadiya</strong>.
+    No claims are made here about professional credentials, certifications, or regulated advisory services.
+  </p>
+
+  <h2 class="text-2xl font-bold mt-8 mb-3">Data freshness and review policy</h2>
+  <p class="text-slate-700 mb-4">
+    Tax slabs, deductions, and lender policies can change. Any year-specific figures on calculator pages should be treated as page assumptions until re-verified.
+    Before updating figures, check official government notifications and lender websites.
+  </p>
   <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-6">
-    <li><strong>Financial math should be free</strong> — Compounding, EMI, taxation — these are basic arithmetic that every Indian deserves to see clearly.</li>
-    <li><strong>Privacy by default</strong> — Your financial inputs are too sensitive to leave your browser. We never see them.</li>
-    <li><strong>India first</strong> — Tax slabs, deductions, and investment products are Indian-specific. We don't ship generic global calculators.</li>
-    <li><strong>Honest content</strong> — We refresh logic every budget season. When slabs change, our calculators change too.</li>
+    <li>Income tax assumptions: verify on the Income Tax Department/CBDT websites before edits.</li>
+    <li>Home loan rate examples: verify directly from lender websites before edits.</li>
+    <li>Review dates are shown on each calculator page and legal page.</li>
   </ul>
 
-  <h2 class="text-2xl font-bold mt-8 mb-3">Our team</h2>
+  <h2 class="text-2xl font-bold mt-8 mb-3">Monetization and analytics status</h2>
   <p class="text-slate-700 mb-4">
-    CalcKaro is built and maintained by a small team of engineers and finance writers based in India. We have over a decade of experience building consumer fintech products and Indian tax tools. We are not Chartered Accountants — our content is for educational and informational purposes only. For binding tax advice, please consult a CA.
+    This repository includes only placeholders for optional ads and analytics integrations.
+    No active publisher ID or analytics ID is shipped in source by default.
   </p>
 
-  <h2 class="text-2xl font-bold mt-8 mb-3">How CalcKaro stays free</h2>
+  <h2 class="text-2xl font-bold mt-8 mb-3">Contact</h2>
   <p class="text-slate-700 mb-4">
-    CalcKaro is funded by non-intrusive display advertising (Google AdSense) and, occasionally, affiliate links to financial products we genuinely recommend. We never promote a product we don't believe in, and we never charge users for calculator access. Premium features — if we ever build them — will always have a free tier.
+    For corrections, bug reports, and feature requests, use the <a href="/contact" class="text-brand-600 underline">contact page</a>.
   </p>
 
-  <h2 class="text-2xl font-bold mt-8 mb-3">Contact us</h2>
-  <p class="text-slate-700 mb-4">
-    Have a calculator suggestion, found a bug, or spotted an outdated tax slab? We'd love to hear from you. Reach out via our <a href="/contact" class="text-brand-600 underline">contact page</a> or email us at hello@calckaro.in.
-  </p>
+  <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-900">
+    <p><strong>Last reviewed:</strong> 2026-09-28</p>
+  </div>
 </main>
 
 <footer class="border-t border-slate-200 bg-slate-50 py-8 mt-12">

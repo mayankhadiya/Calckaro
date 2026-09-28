@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SIP Calculator India 2026 - Calculate Mutual Fund SIP Returns Free | CalcKaro</title>
-<meta name="description" content="Free SIP Calculator India 2026. Calculate returns on monthly mutual fund SIP investments with step-up (top-up) support. See total invested, wealth gained & year-wise projection. Updated for FY 2025-26.">
+<meta name="description" content="Free SIP Calculator for India. Calculate projected monthly mutual fund SIP returns with optional annual step-up support.">
 <meta name="keywords" content="SIP calculator, SIP return calculator India, mutual fund SIP calculator, step up SIP calculator, monthly SIP returns, lumpsum vs SIP, SIP calculator 2026">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://calckaroindia.netlify.app/sip-calculator">
@@ -32,8 +32,7 @@ tailwind.config = {
   "name":"SIP Calculator",
   "applicationCategory":"FinanceApplication",
   "operatingSystem":"Any (Web Browser)",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"1247"}
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
 }
 </script>
 
@@ -73,9 +72,13 @@ tailwind.config = {
   body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
   .gradient-hero { background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #ecfeff 100%); }
   input[type="range"] { accent-color: #ea580c; }
+  .skip-link { position: absolute; left: -9999px; top: auto; }
+  .skip-link:focus { left: 1rem; top: 1rem; background: #111827; color: #fff; padding: .5rem .75rem; border-radius: .5rem; z-index: 60; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #ea580c; outline-offset: 2px; }
 </style>
 </head>
 <body class="bg-white text-slate-800">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -93,10 +96,10 @@ tailwind.config = {
 </header>
 
 <!-- Hero + Calculator -->
-<section class="gradient-hero">
+<section id="main-content" class="gradient-hero">
   <div class="max-w-6xl mx-auto px-4 py-10 md:py-16">
     <div class="text-center max-w-3xl mx-auto mb-8">
-      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">📈 Free · Updated for 2026</span>
+      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">📈 Free · Long-term projection tool</span>
       <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-3">
         SIP Calculator India
       </h1>
@@ -176,7 +179,9 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- AdSense: paste your banner code here when approved -->
+    <div class="border border-dashed border-slate-300 rounded-xl p-4 text-sm text-slate-600 bg-slate-50" aria-label="Adsense placeholder">
+      <strong>Ad placeholder (not active):</strong> Paste approved ad code here.
+    </div>
   </div>
 </section>
 
@@ -236,7 +241,7 @@ tailwind.config = {
   <p>
     Many Indian investors use both: SIPs for monthly surplus and lumpsums for bonuses, windfalls, or maturity proceeds. The key is to stay invested for the long term — 7+ years for equity — to ride out volatility and let compounding do its work.
   </p>
-  <h3 class="text-2xl font-bold mt-8 mb-4">Tax on SIP returns in India (FY 2025-26)</h3>
+  <h3 class="text-2xl font-bold mt-8 mb-4">Tax on SIP returns in India (assumption summary — verify before filing)</h3>
   <p>
     SIP returns are taxed based on the holding period and the type of fund:
   </p>
@@ -294,7 +299,7 @@ tailwind.config = {
       <a href="/income-tax-calculator" class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition">
         <div class="text-3xl mb-2">🧾</div>
         <h3 class="font-bold mb-1">Income Tax Calculator</h3>
-        <p class="text-sm text-slate-600">Compare Old vs New regime for FY 2025-26.</p>
+        <p class="text-sm text-slate-600">Compare old vs new regime assumptions and estimated tax outgo.</p>
       </a>
       <a href="/home-loan-emi-calculator" class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition">
         <div class="text-3xl mb-2">🏠</div>
@@ -307,6 +312,13 @@ tailwind.config = {
         <p class="text-sm text-slate-600">Explore every free tool on CalcKaro.</p>
       </a>
     </div>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 pb-8">
+  <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-900">
+    <p><strong>Last reviewed:</strong> 2026-09-28</p>
+    <p><strong>Assumptions notice:</strong> Tax treatment can change. Verify latest CBDT/Income Tax Department rules before acting on estimates.</p>
   </div>
 </section>
 
@@ -323,7 +335,7 @@ tailwind.config = {
         <span class="text-2xl">🧮</span>
         <span class="text-xl font-bold text-brand-600">CalcKaro</span>
       </div>
-      <p class="text-slate-600">India's smartest free finance calculators.</p>
+      <p class="text-slate-600">Free finance calculators for India.</p>
     </div>
     <div>
       <h4 class="font-semibold mb-3">Calculators</h4>

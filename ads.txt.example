@@ -1,0 +1,5 @@
+# Example only — do not publish unchanged.
+# Create a real /ads.txt file at repository root only after AdSense approval.
+# Replace pub-XXXXXXXXXXXXXXXX with your actual publisher ID.
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

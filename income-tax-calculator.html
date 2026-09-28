@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Income Tax Calculator India FY 2025-26 (AY 2026-27) - Old vs New Regime | CalcKaro</title>
-<meta name="description" content="Free Income Tax Calculator India FY 2025-26 / AY 2026-27. Compare Old vs New tax regime instantly with deductions (80C, 80D, HRA). Accurate CBDT slabs. Salaried & non-salaried.">
+<title>Income Tax Calculator India (Old vs New Regime) | CalcKaro</title>
+<meta name="description" content="Free Income Tax Calculator for India. Compare old vs new regime estimates using the assumptions shown on this page.">
 <meta name="keywords" content="income tax calculator India, old vs new tax regime, FY 2025-26 income tax, AY 2026-27, 80C deduction calculator, new regime tax slabs India, CBDT tax calculator">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://calckaroindia.netlify.app/income-tax-calculator">
 
-<meta property="og:title" content="Income Tax Calculator India FY 2025-26 - Old vs New Regime">
-<meta property="og:description" content="Compare Old vs New tax regime for FY 2025-26 (AY 2026-27). Free, accurate, instant.">
+<meta property="og:title" content="Income Tax Calculator India - Old vs New Regime">
+<meta property="og:description" content="Compare old vs new regime estimates with transparent assumptions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://calckaroindia.netlify.app/income-tax-calculator">
 <meta property="og:locale" content="en_IN">
@@ -32,8 +32,7 @@ tailwind.config = {
   "name":"Income Tax Calculator India",
   "applicationCategory":"FinanceApplication",
   "operatingSystem":"Any (Web Browser)",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"892"}
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
 }
 </script>
 
@@ -60,7 +59,7 @@ tailwind.config = {
     {"@type":"Question","name":"Which tax regime is better for me?","acceptedAnswer":{"@type":"Answer","text":"The New regime is the default from FY 2024-25 and works best for most salaried individuals with limited deductions (under ₹2.5L of total 80C, 80D, HRA). The Old regime can be better if you claim large deductions including home loan interest and HRA in metro cities."}},
     {"@type":"Question","name":"What is the new tax regime slab for FY 2025-26?","acceptedAnswer":{"@type":"Answer","text":"New regime FY 2025-26 (AY 2026-27): 0-3L Nil, 3-7L 5%, 7-10L 10%, 10-12L 15%, 12-15L 20%, above 15L 30%. Standard deduction ₹75,000. Section 87A rebate makes income up to ₹7L effectively tax-free."}},
     {"@type":"Question","name":"What is the old tax regime slab?","acceptedAnswer":{"@type":"Answer","text":"Old regime FY 2025-26: 0-2.5L Nil, 2.5-5L 5%, 5-10L 20%, above 10L 30%. Standard deduction ₹50,000. Section 87A rebate makes income up to ₹5L tax-free. Allows deductions under 80C, 80D, 80CCD(1B), HRA, LTA, home loan interest."}},
-    {"@type":"Question","name":"Is the new regime default?","acceptedAnswer":{"@type":"Answer","text":"Yes. From FY 2024-25 onwards, the New regime is the default for all taxpayers. To opt for the Old regime, salaried individuals must submit Form 10-IE online via the Income Tax portal before filing ITR."}},
+    {"@type":"Question","name":"Are regime-selection rules fixed every year?","acceptedAnswer":{"@type":"Answer","text":"Regime-selection and filing requirements can change. Please verify the latest official filing guidance from the Income Tax Department before making decisions."}},
     {"@type":"Question","name":"What is Section 87A rebate?","acceptedAnswer":{"@type":"Answer","text":"Section 87A provides a rebate that reduces your tax liability to zero. Under the New regime FY 2025-26, residents with total income up to ₹7L get full rebate. Under Old regime, residents with total income up to ₹5L get full rebate."}},
     {"@type":"Question","name":"Does this calculator include Health & Education Cess?","acceptedAnswer":{"@type":"Answer","text":"Yes. We add 4% Health & Education Cess on the calculated income tax, which is mandatory as per CBDT rules for both Old and New regimes."}}
   ]
@@ -71,9 +70,13 @@ tailwind.config = {
   body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
   .gradient-hero { background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #ecfeff 100%); }
   input[type="range"] { accent-color: #ea580c; }
+  .skip-link { position: absolute; left: -9999px; top: auto; }
+  .skip-link:focus { left: 1rem; top: 1rem; background: #111827; color: #fff; padding: .5rem .75rem; border-radius: .5rem; z-index: 60; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #ea580c; outline-offset: 2px; }
 </style>
 </head>
 <body class="bg-white text-slate-800">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -90,15 +93,15 @@ tailwind.config = {
   </div>
 </header>
 
-<section class="gradient-hero">
+<section id="main-content" class="gradient-hero">
   <div class="max-w-6xl mx-auto px-4 py-10 md:py-16">
     <div class="text-center max-w-3xl mx-auto mb-8">
-      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">🧾 Updated for FY 2025-26 · AY 2026-27</span>
+      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">🧾 Uses FY 2025-26 assumptions shown below</span>
       <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-3">
         Income Tax Calculator India
       </h1>
       <p class="text-slate-600 text-lg">
-        Compare the Old vs New tax regime instantly. Includes 80C, 80D, 80CCD(1B), HRA and Home Loan interest deductions. Accurate as per latest CBDT slabs.
+        Compare old vs new tax regime estimates. Includes deductions used in this page's FY 2025-26 assumptions.
       </p>
     </div>
 
@@ -184,15 +187,17 @@ tailwind.config = {
 
     <div id="winnerBanner" class="max-w-4xl mx-auto mt-4 bg-green-50 border border-green-300 rounded-xl p-4 text-center text-green-800 font-medium hidden"></div>
 
-    <!-- AdSense: paste your banner code here when approved -->
+    <div class="border border-dashed border-slate-300 rounded-xl p-4 text-sm text-slate-600 bg-slate-50" aria-label="Adsense placeholder">
+      <strong>Ad placeholder (not active):</strong> Paste approved ad code here.
+    </div>
   </div>
 </section>
 
 <!-- SEO Content -->
 <section class="max-w-4xl mx-auto px-4 py-10 prose prose-slate">
-  <h2 class="text-3xl font-bold mb-6">Income Tax Slabs for FY 2025-26 (AY 2026-27)</h2>
+  <h2 class="text-3xl font-bold mb-6">Income Tax Slab Assumptions Used on This Page</h2>
   <p>
-    The Government of India made the <strong>New tax regime</strong> the default from FY 2024-25 onwards, and the slabs were revised in Budget 2025 for FY 2025-26 (Assessment Year 2026-27). The New regime offers lower slab rates but removes most exemptions and deductions. The Old regime retains higher slab rates but allows a wide range of deductions under Chapter VI-A and Section 10.
+    The calculator logic currently reflects FY 2025-26 (AY 2026-27) assumptions maintained in this repository. Tax law can change each budget cycle, so verify official sources before relying on these figures for filing or planning decisions.
   </p>
 
   <h3 class="text-2xl font-bold mt-8 mb-4">New Tax Regime Slabs (FY 2025-26)</h3>
@@ -237,7 +242,7 @@ tailwind.config = {
     The <strong>Old regime wins</strong> when you have substantial deductions: a home loan (Section 24b up to ₹2L interest), large HRA in metro cities, full 80C utilization (₹1.5L), 80CCD(1B) NPS contribution (₹50,000), or a 80D family floater health insurance (up to ₹75,000 for senior citizen parents).
   </p>
   <p>
-    For FY 2025-26, taxpayers can switch between regimes only once during the year (at the time of filing ITR). So pick carefully and use our calculator above to compare both for your exact numbers.
+    Regime-selection rules can change. Use this as an estimate tool and confirm current filing rules from official Income Tax Department guidance.
   </p>
 
   <h3 class="text-2xl font-bold mt-8 mb-4">Common deductions under Old Regime</h3>
@@ -274,16 +279,16 @@ tailwind.config = {
       <p class="mt-2 text-slate-700">The New regime is the default from FY 2024-25 and works best for most salaried individuals with limited deductions (under ₹2.5L of total 80C, 80D, HRA). The Old regime can be better if you claim large deductions including home loan interest and HRA in metro cities.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
-      <summary class="font-semibold cursor-pointer">What is the new tax regime slab for FY 2025-26?</summary>
+      <summary class="font-semibold cursor-pointer">What assumptions does this calculator use for the new regime?</summary>
       <p class="mt-2 text-slate-700">New regime FY 2025-26 (AY 2026-27): 0-3L Nil, 3-7L 5%, 7-10L 10%, 10-12L 15%, 12-15L 20%, above 15L 30%. Standard deduction ₹75,000. Section 87A rebate makes income up to ₹7L effectively tax-free.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
-      <summary class="font-semibold cursor-pointer">What is the old tax regime slab?</summary>
+      <summary class="font-semibold cursor-pointer">What assumptions does this calculator use for the old regime?</summary>
       <p class="mt-2 text-slate-700">Old regime FY 2025-26: 0-2.5L Nil, 2.5-5L 5%, 5-10L 20%, above 10L 30%. Standard deduction ₹50,000. Section 87A rebate makes income up to ₹5L tax-free. Allows deductions under 80C, 80D, 80CCD(1B), HRA, LTA, home loan interest.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
-      <summary class="font-semibold cursor-pointer">Is the new regime default?</summary>
-      <p class="mt-2 text-slate-700">Yes. From FY 2024-25 onwards, the New regime is the default for all taxpayers. To opt for the Old regime, salaried individuals must submit Form 10-IE online via the Income Tax portal before filing ITR.</p>
+      <summary class="font-semibold cursor-pointer">Are regime-selection rules fixed every year?</summary>
+      <p class="mt-2 text-slate-700">Regime-selection and filing requirements can change. Verify the latest official filing guidance from the Income Tax Department before making decisions.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">What is Section 87A rebate?</summary>
@@ -320,8 +325,16 @@ tailwind.config = {
   </div>
 </section>
 
+<section class="max-w-4xl mx-auto px-4 pb-8">
+  <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-900">
+    <p><strong>Last reviewed:</strong> 2026-09-28</p>
+    <p><strong>Annual review note:</strong> Before changing slabs/deductions, verify official updates from the Income Tax Department and CBDT.</p>
+    <p><strong>Reference links:</strong> <a class="underline" href="https://incometaxindia.gov.in/" target="_blank" rel="noopener">Income Tax Department</a> · <a class="underline" href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Income Tax e-Filing Portal</a></p>
+  </div>
+</section>
+
 <section class="max-w-4xl mx-auto px-4 py-8 text-xs text-slate-500 text-center">
-  <p><strong>Disclaimer:</strong> Income tax calculations are based on the latest CBDT notification and are for informational purposes only. They do not constitute tax advice. Please consult a Chartered Accountant for filing decisions.</p>
+  <p><strong>Disclaimer:</strong> Income tax calculations are based on FY 2025-26 assumptions coded in this page and are for informational purposes only. Verify official sources before filing.</p>
 </section>
 
 <!-- Footer -->
@@ -332,7 +345,7 @@ tailwind.config = {
         <span class="text-2xl">🧮</span>
         <span class="text-xl font-bold text-brand-600">CalcKaro</span>
       </div>
-      <p class="text-slate-600">India's smartest free finance calculators.</p>
+      <p class="text-slate-600">Free finance calculators for India.</p>
     </div>
     <div>
       <h4 class="font-semibold mb-3">Calculators</h4>
