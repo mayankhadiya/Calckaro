@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://calckaroindia.netlify.app/home-loan-emi-calculator">
 
 <meta property="og:title" content="Home Loan EMI Calculator India 2026 - Free with Amortization">
-<meta property="og:description" content="Calculate EMI, total interest and full amortization for any home loan. Free, accurate.">
+<meta property="og:description" content="Estimate EMI, total interest and amortization for a home loan using the rate and tenure you enter.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://calckaroindia.netlify.app/home-loan-emi-calculator">
 <meta property="og:locale" content="en_IN">
@@ -32,8 +32,7 @@ tailwind.config = {
   "name":"Home Loan EMI Calculator",
   "applicationCategory":"FinanceApplication",
   "operatingSystem":"Any (Web Browser)",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"1583"}
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
 }
 </script>
 
@@ -60,7 +59,7 @@ tailwind.config = {
   "mainEntity":[
     {"@type":"Question","name":"What is EMI?","acceptedAnswer":{"@type":"Answer","text":"EMI stands for Equated Monthly Installment. It is the fixed amount you pay to the bank every month towards repaying your home loan. EMI consists of two parts — principal repayment and interest payment."}},
     {"@type":"Question","name":"How is home loan EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P is the principal loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the total number of months (tenure in years × 12)."}},
-    {"@type":"Question","name":"What is the current home loan interest rate in India?","acceptedAnswer":{"@type":"Answer","text":"As of 2026, most Indian banks offer home loan interest rates between 8.40% and 9.50% per annum for salaried borrowers with good credit. SBI, HDFC, ICICI, LIC Housing Finance and PNB Housing Finance are the most common lenders."}},
+    {"@type":"Question","name":"Which interest rate should I enter?","acceptedAnswer":{"@type":"Answer","text":"Use the annual rate in your lender's current offer or loan statement. Rates depend on the lender, benchmark, borrower profile and reset terms, and can change over time."}},
     {"@type":"Question","name":"What is the maximum home loan tenure in India?","acceptedAnswer":{"@type":"Answer","text":"Most Indian banks offer home loan tenure up to 30 years. The maximum is typically capped so that the borrower is no older than 65-70 years at the end of the loan tenure."}},
     {"@type":"Question","name":"Is EMI fixed or floating?","acceptedAnswer":{"@type":"Answer","text":"Home loans in India are usually offered on floating interest rates, which means EMI changes when the bank revises its benchmark rate (repo rate linked). Some banks also offer fixed-rate loans for an initial 1-3 year period, after which they convert to floating."}},
     {"@type":"Question","name":"Can I prepay my home loan?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most banks allow prepayment of floating-rate home loans without penalty. Prepayment reduces your outstanding principal, which in turn reduces future interest outflow and shortens your loan tenure."}}
@@ -117,7 +116,7 @@ tailwind.config = {
             <label class="block text-sm font-semibold mb-2">Interest Rate (% per annum)</label>
             <input type="number" id="loanRate" value="8.5" min="0.1" max="20" step="0.05" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
             <input type="range" id="loanRateRange" min="6" max="15" step="0.05" value="8.5" class="w-full mt-2">
-            <p class="text-xs text-slate-500 mt-1">Current market range: 8.40% – 9.50%</p>
+            <p class="text-xs text-slate-500 mt-1">Use the annual rate in your lender's current offer or statement.</p>
           </div>
 
           <div>
@@ -159,7 +158,6 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- AdSense: paste your banner code here when approved -->
   </div>
 </section>
 
@@ -200,30 +198,16 @@ tailwind.config = {
   </p>
   <p>Where: <strong>P</strong> = principal loan amount, <strong>r</strong> = monthly interest rate (annual rate ÷ 12 ÷ 100), and <strong>n</strong> = total number of months (tenure × 12).</p>
 
-  <h3 class="text-2xl font-bold mt-8 mb-4">Current Home Loan Interest Rates in India (2026)</h3>
-  <div class="not-prose overflow-x-auto mb-4">
-    <table class="w-full text-sm border border-slate-200">
-      <thead class="bg-slate-100">
-        <tr><th class="px-4 py-2 text-left">Bank / Lender</th><th class="px-4 py-2 text-right">Interest Rate (p.a.)</th></tr>
-      </thead>
-      <tbody>
-        <tr class="border-t"><td class="px-4 py-2">SBI Home Loan</td><td class="px-4 py-2 text-right">8.40% – 9.15%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">HDFC Bank</td><td class="px-4 py-2 text-right">8.50% – 9.50%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">ICICI Bank</td><td class="px-4 py-2 text-right">8.75% – 9.45%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">LIC Housing Finance</td><td class="px-4 py-2 text-right">8.45% – 9.30%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">PNB Housing Finance</td><td class="px-4 py-2 text-right">8.50% – 9.75%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="text-sm">Rates vary based on your credit score (CIBIL ≥ 750 gets the best rates), employer category, loan amount, and the bank's internal policy. Rates are linked to the RBI repo rate and may change during the loan tenure.</p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">Choosing the interest-rate input</h3>
+  <p>Use the annual rate shown in your lender's current offer or latest loan statement. Do not rely on an undated market range: the applicable rate depends on the lender, benchmark, borrower profile, fees and reset terms. For floating-rate loans, recalculate when the lender changes the rate.</p>
 
   <h3 class="text-2xl font-bold mt-8 mb-4">Tax benefits on Home Loan</h3>
-  <p>Indian taxpayers can claim two main tax benefits on a home loan:</p>
+  <p>Eligible taxpayers using the Old regime may be able to claim home-loan deductions, subject to current conditions and limits:</p>
   <ul class="list-disc pl-6 space-y-2">
     <li><strong>Section 80C</strong> — Repayment of principal up to ₹1,50,000 per year is deductible under Section 80C (along with other 80C investments).</li>
     <li><strong>Section 24(b)</strong> — Interest paid up to ₹2,00,000 per year is fully deductible from "Income from House Property" for self-occupied property. There is no upper limit if the property is let out (rented).</li>
   </ul>
-  <p>For first-time home buyers taking a loan up to ₹35 lakh (property value up to ₹45 lakh), an additional deduction of up to ₹1,50,000 on interest is available under <strong>Section 80EEA</strong> (extended in select budgets). Check the latest CBDT notification for current applicability.</p>
+  <p>Tax eligibility depends on the property, possession, loan and tax regime. Verify current deductions on the Income Tax Department portal or with a qualified tax professional rather than relying on the EMI result.</p>
 
   <h3 class="text-2xl font-bold mt-8 mb-4">Tips to reduce Home Loan EMI</h3>
   <ol class="list-decimal pl-6 space-y-2">
@@ -248,8 +232,8 @@ tailwind.config = {
       <p class="mt-2 text-slate-700">EMI is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P is the principal loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the total number of months (tenure in years × 12).</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
-      <summary class="font-semibold cursor-pointer">What is the current home loan interest rate in India?</summary>
-      <p class="mt-2 text-slate-700">As of 2026, most Indian banks offer home loan interest rates between 8.40% and 9.50% per annum for salaried borrowers with good credit. SBI, HDFC, ICICI, LIC Housing Finance and PNB Housing Finance are the most common lenders.</p>
+      <summary class="font-semibold cursor-pointer">Which interest rate should I enter?</summary>
+      <p class="mt-2 text-slate-700">Use the annual rate in your lender's current offer or loan statement. Rates depend on the lender, benchmark, borrower profile and reset terms, and can change over time.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">What is the maximum home loan tenure in India?</summary>
@@ -264,6 +248,12 @@ tailwind.config = {
       <p class="mt-2 text-slate-700">Yes. Most banks allow prepayment of floating-rate home loans without penalty. Prepayment reduces your outstanding principal, which in turn reduces future interest outflow and shortens your loan tenure.</p>
     </details>
   </div>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 py-8 border-t border-slate-200 text-sm text-slate-600">
+  <h2 class="text-xl font-bold text-slate-900 mb-3">Sources, assumptions and review</h2>
+  <p>The schedule uses a standard monthly reducing-balance calculation and assumes the entered rate remains constant, payments arrive monthly and fees are excluded. Reviewed 28 September 2026 by <a href="/about" class="text-brand-600 underline">Mayank Hadiya</a>, software developer.</p>
+  <p class="mt-2">For consumer guidance, see the <a href="https://www.rbi.org.in/commonperson/English/Scripts/FAQs.aspx" target="_blank" rel="noopener noreferrer" class="text-brand-600 underline">Reserve Bank of India FAQs</a>. Confirm the actual schedule and charges with your lender.</p>
 </section>
 
 <!-- Related Tools -->
@@ -302,7 +292,7 @@ tailwind.config = {
         <span class="text-2xl">🧮</span>
         <span class="text-xl font-bold text-brand-600">CalcKaro</span>
       </div>
-      <p class="text-slate-600">India's smartest free finance calculators.</p>
+      <p class="text-slate-600">Focused finance calculators for India.</p>
     </div>
     <div>
       <h4 class="font-semibold mb-3">Calculators</h4>

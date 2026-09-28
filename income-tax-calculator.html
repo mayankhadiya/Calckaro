@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Income Tax Calculator India FY 2025-26 (AY 2026-27) - Old vs New Regime | CalcKaro</title>
-<meta name="description" content="Free Income Tax Calculator India FY 2025-26 / AY 2026-27. Compare Old vs New tax regime instantly with deductions (80C, 80D, HRA). Accurate CBDT slabs. Salaried & non-salaried.">
+<meta name="description" content="Estimate salaried income tax for FY 2025-26 / AY 2026-27 and compare Old vs New regimes using documented slabs, deductions and assumptions.">
 <meta name="keywords" content="income tax calculator India, old vs new tax regime, FY 2025-26 income tax, AY 2026-27, 80C deduction calculator, new regime tax slabs India, CBDT tax calculator">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://calckaroindia.netlify.app/income-tax-calculator">
@@ -32,8 +32,7 @@ tailwind.config = {
   "name":"Income Tax Calculator India",
   "applicationCategory":"FinanceApplication",
   "operatingSystem":"Any (Web Browser)",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"892"}
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
 }
 </script>
 
@@ -44,7 +43,7 @@ tailwind.config = {
   "@type":"HowTo",
   "name":"How to compare Old vs New tax regime online",
   "step":[
-    {"@type":"HowToStep","name":"Enter gross annual income","text":"Type your total gross income from salary, business or other sources before any deductions."},
+    {"@type":"HowToStep","name":"Enter gross annual salary or pension","text":"Type ordinary salary or pension income before the standard deduction and other deductions."},
     {"@type":"HowToStep","name":"Enter deductions under old regime","text":"Add your 80C, 80D, 80CCD(1B), HRA, LTA and home loan interest deductions under the Old regime."},
     {"@type":"HowToStep","name":"View side-by-side comparison","text":"See tax out-go under both Old and New regimes, including cess, and which one saves you more."}
   ]
@@ -58,10 +57,10 @@ tailwind.config = {
   "@type":"FAQPage",
   "mainEntity":[
     {"@type":"Question","name":"Which tax regime is better for me?","acceptedAnswer":{"@type":"Answer","text":"The New regime is the default from FY 2024-25 and works best for most salaried individuals with limited deductions (under ₹2.5L of total 80C, 80D, HRA). The Old regime can be better if you claim large deductions including home loan interest and HRA in metro cities."}},
-    {"@type":"Question","name":"What is the new tax regime slab for FY 2025-26?","acceptedAnswer":{"@type":"Answer","text":"New regime FY 2025-26 (AY 2026-27): 0-3L Nil, 3-7L 5%, 7-10L 10%, 10-12L 15%, 12-15L 20%, above 15L 30%. Standard deduction ₹75,000. Section 87A rebate makes income up to ₹7L effectively tax-free."}},
+    {"@type":"Question","name":"What is the new tax regime slab for FY 2025-26?","acceptedAnswer":{"@type":"Answer","text":"New regime FY 2025-26 (AY 2026-27): up to ₹4L Nil, ₹4L-₹8L 5%, ₹8L-₹12L 10%, ₹12L-₹16L 15%, ₹16L-₹20L 20%, ₹20L-₹24L 25%, and above ₹24L 30%. Eligible salaried taxpayers also receive a ₹75,000 standard deduction."}},
     {"@type":"Question","name":"What is the old tax regime slab?","acceptedAnswer":{"@type":"Answer","text":"Old regime FY 2025-26: 0-2.5L Nil, 2.5-5L 5%, 5-10L 20%, above 10L 30%. Standard deduction ₹50,000. Section 87A rebate makes income up to ₹5L tax-free. Allows deductions under 80C, 80D, 80CCD(1B), HRA, LTA, home loan interest."}},
-    {"@type":"Question","name":"Is the new regime default?","acceptedAnswer":{"@type":"Answer","text":"Yes. From FY 2024-25 onwards, the New regime is the default for all taxpayers. To opt for the Old regime, salaried individuals must submit Form 10-IE online via the Income Tax portal before filing ITR."}},
-    {"@type":"Question","name":"What is Section 87A rebate?","acceptedAnswer":{"@type":"Answer","text":"Section 87A provides a rebate that reduces your tax liability to zero. Under the New regime FY 2025-26, residents with total income up to ₹7L get full rebate. Under Old regime, residents with total income up to ₹5L get full rebate."}},
+    {"@type":"Question","name":"Is the new regime default?","acceptedAnswer":{"@type":"Answer","text":"Yes. The New regime is the default. Eligible taxpayers without business income can choose the Old regime in their return; taxpayers with business or professional income have separate Form 10-IEA and switching rules."}},
+    {"@type":"Question","name":"What is Section 87A rebate?","acceptedAnswer":{"@type":"Answer","text":"For FY 2025-26, a resident individual under the New regime may receive a rebate of up to ₹60,000 when total income does not exceed ₹12 lakh, with marginal relief just above that threshold. The Old-regime threshold remains ₹5 lakh with a rebate up to ₹12,500. Special-rate income can be treated differently."}},
     {"@type":"Question","name":"Does this calculator include Health & Education Cess?","acceptedAnswer":{"@type":"Answer","text":"Yes. We add 4% Health & Education Cess on the calculated income tax, which is mandatory as per CBDT rules for both Old and New regimes."}}
   ]
 }
@@ -98,7 +97,7 @@ tailwind.config = {
         Income Tax Calculator India
       </h1>
       <p class="text-slate-600 text-lg">
-        Compare the Old vs New tax regime instantly. Includes 80C, 80D, 80CCD(1B), HRA and Home Loan interest deductions. Accurate as per latest CBDT slabs.
+        Estimate tax on ordinary salary or pension income and compare the Old and New regimes. Includes common Old-regime deductions and states what the estimate does not cover.
       </p>
     </div>
 
@@ -106,10 +105,10 @@ tailwind.config = {
       <div class="space-y-6">
 
         <div>
-          <label class="block text-sm font-semibold mb-2">Gross Annual Income (₹)</label>
+          <label class="block text-sm font-semibold mb-2">Gross Annual Salary / Pension (₹)</label>
           <input type="number" id="taxIncome" value="1200000" min="0" step="10000" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
           <input type="range" id="taxIncomeRange" min="300000" max="5000000" step="10000" value="1200000" class="w-full mt-2">
-          <p class="text-xs text-slate-500 mt-1">Total income from salary, business, interest, etc.</p>
+          <p class="text-xs text-slate-500 mt-1">Ordinary salary or pension income before the standard deduction. This calculator is not designed for business or special-rate income.</p>
         </div>
 
         <div class="bg-slate-50 p-5 rounded-lg">
@@ -140,7 +139,7 @@ tailwind.config = {
               <input type="number" id="dedOther" value="0" min="0" class="w-full border border-slate-300 rounded px-3 py-2">
             </div>
           </div>
-          <p class="text-xs text-slate-500 mt-3">These deductions apply only under the Old regime. New regime allows zero deductions (except employer NPS).</p>
+          <p class="text-xs text-slate-500 mt-3">These inputs are applied only to the Old-regime estimate. Eligibility depends on your circumstances and supporting records.</p>
         </div>
       </div>
     </div>
@@ -184,7 +183,6 @@ tailwind.config = {
 
     <div id="winnerBanner" class="max-w-4xl mx-auto mt-4 bg-green-50 border border-green-300 rounded-xl p-4 text-center text-green-800 font-medium hidden"></div>
 
-    <!-- AdSense: paste your banner code here when approved -->
   </div>
 </section>
 
@@ -202,16 +200,17 @@ tailwind.config = {
         <tr><th class="px-4 py-2 text-left">Income Slab</th><th class="px-4 py-2 text-right">Tax Rate</th></tr>
       </thead>
       <tbody>
-        <tr class="border-t"><td class="px-4 py-2">₹0 – ₹3,00,000</td><td class="px-4 py-2 text-right">Nil</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">₹3,00,000 – ₹7,00,000</td><td class="px-4 py-2 text-right">5%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">₹7,00,000 – ₹10,00,000</td><td class="px-4 py-2 text-right">10%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">₹10,00,000 – ₹12,00,000</td><td class="px-4 py-2 text-right">15%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">₹12,00,000 – ₹15,00,000</td><td class="px-4 py-2 text-right">20%</td></tr>
-        <tr class="border-t"><td class="px-4 py-2">Above ₹15,00,000</td><td class="px-4 py-2 text-right">30%</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">₹0 – ₹4,00,000</td><td class="px-4 py-2 text-right">Nil</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">₹4,00,000 – ₹8,00,000</td><td class="px-4 py-2 text-right">5%</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">₹8,00,000 – ₹12,00,000</td><td class="px-4 py-2 text-right">10%</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">₹12,00,000 – ₹16,00,000</td><td class="px-4 py-2 text-right">15%</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">₹16,00,000 – ₹20,00,000</td><td class="px-4 py-2 text-right">20%</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">₹20,00,000 – ₹24,00,000</td><td class="px-4 py-2 text-right">25%</td></tr>
+        <tr class="border-t"><td class="px-4 py-2">Above ₹24,00,000</td><td class="px-4 py-2 text-right">30%</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="text-sm">Plus 4% Health & Education Cess. Standard Deduction: ₹75,000. Section 87A rebate makes income up to ₹7,00,000 effectively tax-free.</p>
+  <p class="text-sm">Plus 4% Health & Education Cess. Eligible salary and pension income receives a ₹75,000 standard deduction. For resident individuals under the New regime, Section 87A provides a rebate up to ₹60,000 when total income does not exceed ₹12,00,000, plus marginal relief immediately above the threshold.</p>
 
   <h3 class="text-2xl font-bold mt-8 mb-4">Old Tax Regime Slabs (FY 2025-26)</h3>
   <div class="not-prose overflow-x-auto mb-4">
@@ -237,7 +236,7 @@ tailwind.config = {
     The <strong>Old regime wins</strong> when you have substantial deductions: a home loan (Section 24b up to ₹2L interest), large HRA in metro cities, full 80C utilization (₹1.5L), 80CCD(1B) NPS contribution (₹50,000), or a 80D family floater health insurance (up to ₹75,000 for senior citizen parents).
   </p>
   <p>
-    For FY 2025-26, taxpayers can switch between regimes only once during the year (at the time of filing ITR). So pick carefully and use our calculator above to compare both for your exact numbers.
+    Taxpayers without business income can generally choose a regime while filing the return each year. Taxpayers with business or professional income face separate Form 10-IEA and switching rules. This calculator is scoped to ordinary salary or pension income.
   </p>
 
   <h3 class="text-2xl font-bold mt-8 mb-4">Common deductions under Old Regime</h3>
@@ -257,12 +256,18 @@ tailwind.config = {
     Section 87A provides a rebate that reduces your tax liability to zero up to a certain income threshold. For FY 2025-26:
   </p>
   <ul class="list-disc pl-6 space-y-2">
-    <li><strong>New regime:</strong> Residents with total income up to ₹7,00,000 — full rebate, tax = ₹0</li>
+    <li><strong>New regime:</strong> Eligible resident individuals with total income up to ₹12,00,000 — rebate up to ₹60,000, subject to rules for special-rate income</li>
     <li><strong>Old regime:</strong> Residents with total income up to ₹5,00,000 — full rebate, tax = ₹0</li>
   </ul>
   <p>
-    The rebate amount is capped — meaning the rebate cannot exceed the actual tax liability before cess. So you effectively pay zero tax plus zero cess on incomes within these thresholds. After rebate, the 4% Health & Education Cess is also zero.
+    The rebate cannot exceed the eligible tax liability. Marginal relief limits the sudden increase in tax where New-regime income is only slightly above ₹12,00,000. This simplified calculator does not calculate surcharge or tax on capital gains, lottery income, virtual digital assets or other special-rate income.
   </p>
+  <h3 class="text-2xl font-bold mt-8 mb-4">Sources, assumptions and review</h3>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>Rules were reviewed on <strong>28 September 2026</strong> for the supported <strong>FY 2025–26 / AY 2026–27</strong> period.</li>
+    <li>Primary references: <a href="https://www.indiabudget.gov.in/" target="_blank" rel="noopener noreferrer" class="text-brand-600 underline">Union Budget portal</a> and <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener noreferrer" class="text-brand-600 underline">Income Tax Department portal</a>.</li>
+    <li>Author and technical reviewer: <a href="/about" class="text-brand-600 underline">Mayank Hadiya</a>, software developer. This is not a CA review or tax advice.</li>
+  </ul>
 </section>
 
 <!-- FAQ -->
@@ -275,7 +280,7 @@ tailwind.config = {
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">What is the new tax regime slab for FY 2025-26?</summary>
-      <p class="mt-2 text-slate-700">New regime FY 2025-26 (AY 2026-27): 0-3L Nil, 3-7L 5%, 7-10L 10%, 10-12L 15%, 12-15L 20%, above 15L 30%. Standard deduction ₹75,000. Section 87A rebate makes income up to ₹7L effectively tax-free.</p>
+      <p class="mt-2 text-slate-700">New regime FY 2025-26 (AY 2026-27): up to ₹4L Nil, ₹4L–₹8L 5%, ₹8L–₹12L 10%, ₹12L–₹16L 15%, ₹16L–₹20L 20%, ₹20L–₹24L 25%, and above ₹24L 30%. Eligible salaried taxpayers receive a ₹75,000 standard deduction.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">What is the old tax regime slab?</summary>
@@ -283,11 +288,11 @@ tailwind.config = {
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">Is the new regime default?</summary>
-      <p class="mt-2 text-slate-700">Yes. From FY 2024-25 onwards, the New regime is the default for all taxpayers. To opt for the Old regime, salaried individuals must submit Form 10-IE online via the Income Tax portal before filing ITR.</p>
+      <p class="mt-2 text-slate-700">Yes. The New regime is the default. Eligible taxpayers without business income can choose the Old regime in their return; taxpayers with business or professional income have separate Form 10-IEA and switching rules.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">What is Section 87A rebate?</summary>
-      <p class="mt-2 text-slate-700">Section 87A provides a rebate that reduces your tax liability to zero. Under the New regime FY 2025-26, residents with total income up to ₹7L get full rebate. Under Old regime, residents with total income up to ₹5L get full rebate.</p>
+      <p class="mt-2 text-slate-700">For FY 2025-26, an eligible resident individual under the New regime can receive a rebate up to ₹60,000 when total income does not exceed ₹12 lakh, with marginal relief just above the threshold. The Old-regime threshold remains ₹5 lakh with a rebate up to ₹12,500. Special-rate income may be treated differently.</p>
     </details>
     <details class="bg-white border border-slate-200 rounded-lg p-4">
       <summary class="font-semibold cursor-pointer">Does this calculator include Health & Education Cess?</summary>
@@ -321,7 +326,7 @@ tailwind.config = {
 </section>
 
 <section class="max-w-4xl mx-auto px-4 py-8 text-xs text-slate-500 text-center">
-  <p><strong>Disclaimer:</strong> Income tax calculations are based on the latest CBDT notification and are for informational purposes only. They do not constitute tax advice. Please consult a Chartered Accountant for filing decisions.</p>
+  <p><strong>Disclaimer:</strong> This simplified estimate supports ordinary salary or pension income for FY 2025–26. It excludes surcharge, special-rate income and individual eligibility nuances. Verify the result on the Income Tax portal or with a Chartered Accountant before filing.</p>
 </section>
 
 <!-- Footer -->
@@ -332,7 +337,7 @@ tailwind.config = {
         <span class="text-2xl">🧮</span>
         <span class="text-xl font-bold text-brand-600">CalcKaro</span>
       </div>
-      <p class="text-slate-600">India's smartest free finance calculators.</p>
+      <p class="text-slate-600">Focused finance calculators for India.</p>
     </div>
     <div>
       <h4 class="font-semibold mb-3">Calculators</h4>
@@ -393,16 +398,22 @@ function calcNewRegime(gross) {
   const taxable = Math.max(0, gross - totalDeds);
 
   let tax = 0;
-  if (taxable <= 300000) tax = 0;
-  else if (taxable <= 700000) tax = (taxable - 300000) * 0.05;
-  else if (taxable <= 1000000) tax = 20000 + (taxable - 700000) * 0.10;
-  else if (taxable <= 1200000) tax = 50000 + (taxable - 1000000) * 0.15;
-  else if (taxable <= 1500000) tax = 80000 + (taxable - 1200000) * 0.20;
-  else tax = 140000 + (taxable - 1500000) * 0.30;
+  if (taxable <= 400000) tax = 0;
+  else if (taxable <= 800000) tax = (taxable - 400000) * 0.05;
+  else if (taxable <= 1200000) tax = 20000 + (taxable - 800000) * 0.10;
+  else if (taxable <= 1600000) tax = 60000 + (taxable - 1200000) * 0.15;
+  else if (taxable <= 2000000) tax = 120000 + (taxable - 1600000) * 0.20;
+  else if (taxable <= 2400000) tax = 200000 + (taxable - 2000000) * 0.25;
+  else tax = 300000 + (taxable - 2400000) * 0.30;
 
-  // 87A Rebate New: full rebate up to ₹7L income
+  // Section 87A: up to ₹60,000 rebate through ₹12L, then marginal relief.
   let rebate = 0;
-  if (taxable <= 700000) rebate = tax;
+  if (taxable <= 1200000) {
+    rebate = Math.min(tax, 60000);
+  } else {
+    const excessIncome = taxable - 1200000;
+    if (tax > excessIncome) rebate = tax - excessIncome;
+  }
 
   const afterRebate = Math.max(0, tax - rebate);
   const cess = afterRebate * 0.04;
